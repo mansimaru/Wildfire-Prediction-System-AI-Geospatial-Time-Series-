@@ -1,0 +1,14 @@
+# EDA and Model Training in Jupyter Notebook
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from src.utils import load_data
+from src.model import train_model
+
+df = load_data('data/historical_fires.csv', 'data/weather.csv')
+sns.lineplot(data=df, x='date', y='fire_count')
+plt.title("Wildfire Trend Over Time")
+plt.show()
+
+model, forecast = train_model(df)
+model.plot(forecast);
