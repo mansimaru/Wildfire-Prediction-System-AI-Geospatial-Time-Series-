@@ -1,0 +1,7 @@
+#starter Code
+import pandas as pd
+
+def load_data(fire_path, weather_path):
+    fires = pd.read_csv(fire_path, parse_dates=['date'])
+    weather = pd.read_csv(weather_path, parse_dates=['date'])
+    return pd.merge(fires, weather, on='date', how='inner')
