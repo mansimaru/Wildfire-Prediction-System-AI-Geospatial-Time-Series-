@@ -1,0 +1,11 @@
+
+---
+
+### 📦 Step 5: `requirements.txt`
+
+```txt
+pandas
+matplotlib
+seaborn
+prophet
+jupyter
